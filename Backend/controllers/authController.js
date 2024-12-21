@@ -38,6 +38,8 @@ exports.signup = async (request, response) => {
 
 exports.login = async (request, response) => {
 	const { email, password } = request.body;
+	
+	console.log(request.headers);
 
 	if (!email || !password) {
 		response.status(400).json({
